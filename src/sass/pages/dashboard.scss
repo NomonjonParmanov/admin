@@ -1,0 +1,77 @@
+.chart {
+  position: absolute;
+  left: -160px;
+}
+
+.product {
+  width: 89%;
+  position: absolute;
+  left: 600px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 30px;
+  padding-top: 50px;
+  .card {
+    width: 326px;
+    margin: 0 auto;
+    border: 1px solid #e8e8e8;
+    border-radius: 50px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    .card__bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      padding-top: 10px;
+      .text {
+        p {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 20px;
+          color: rgb(69, 69, 69);
+          font-size: 20px;
+          font-weight: 700;
+          line-height: 110%;
+          span {
+            color: gray;
+            text-decoration: line-through;
+            font-size: 16px;
+          }
+        }
+      }
+      .delete {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        button {
+          width: 50px;
+          font-size: 20px;
+          height: 33px;
+          color: #000;
+          border: 1px solid rgb(69, 69, 69);
+          border-radius: 100px;
+          background: rgb(255, 255, 255);
+        }
+        .delete2 {
+          color: #fff;
+          background: rgb(69, 69, 69);
+        }
+      }
+    }
+    img {
+      width: 300px;
+      margin: 0 auto;
+      height: 200px;
+      object-fit: contain;
+    }
+    h3 {
+      color: rgb(69, 69, 69);
+      font-size: 25px;
+      font-weight: 500;
+      line-height: 110%;
+      text-align: center;
+    }
+  }
+}
