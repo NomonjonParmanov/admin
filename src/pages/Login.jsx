@@ -51,7 +51,6 @@ function Register() {
           required
         />
         <button type="submit">Login</button>
-        <button className="btn3">Signup?</button>
       </form>
       <ToastContainer />
     </div>
