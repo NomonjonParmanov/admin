@@ -23,7 +23,7 @@ const CreateProduct = () => {
     })
       .then((response) => response.json())
       .then((data) => {
-        console.log("Product added:", data);
+        toast.success("Product created successfully!");
         setTitle("");
         setPrice("");
         setImg("");

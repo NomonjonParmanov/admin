@@ -5,6 +5,7 @@ import { MdOutlineCreateNewFolder, MdDashboard } from "react-icons/md";
 import Dashboard from "../components/dashboard/Dashboard";
 import CreateProduct from "../components/addProducts/CreateProduct";
 import EditProduct from "../components/dashboard/products/EditProduct";
+import JsonProducts from "../components/jsonProducts/JsonProducts";
 const Admin = () => {
   const navigate = useNavigate();
   const handleDelete = () => {
@@ -18,6 +19,7 @@ const Admin = () => {
         <Route path="createProduct" element={<CreateProduct />} />
         <Route path="editProduct/:id" element={<EditProduct />} />
         <Route path="dashboard" element={<Dashboard />} />
+        <Route path="jsonProducts" element={<JsonProducts />} />
       </Routes>
       <aside className="sidebar">
         <h1>Admin Dashboard</h1>
@@ -32,6 +34,12 @@ const Admin = () => {
             <li>
               <MdOutlineCreateNewFolder className="icon" />
               Create Products
+            </li>
+          </NavLink>
+          <NavLink to="/admin/jsonProducts">
+            <li>
+              <MdOutlineCreateNewFolder className="icon" />
+              Json Products
             </li>
           </NavLink>
         </ul>
