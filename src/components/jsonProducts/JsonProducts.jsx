@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { CiEdit } from "react-icons/ci";
 import { MdDeleteForever } from "react-icons/md";
 import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 
 const JsonProducts = () => {
   const [products, setProducts] = useState([]);

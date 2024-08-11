@@ -39,6 +39,22 @@
       "img": "https://i.imgur.com/3oXNBst.jpeg",
       "category": "Furnityre",
       "desc": "Elevate your home office with our Modern Minimalist Workstation Setup, featuring a sleek wooden desk topped with an elegant computer, stylish adjustable wooden desk lamp, and complimentary accessories for a clean, productive workspace. This setup is perfect for professionals seeking a contemporary look that combines functionality with design."
+    },
+    {
+      "id": "577e",
+      "title": "Modern Ergonomic Office Chair",
+      "price": "70",
+      "img": "https://i.imgur.com/3dU0m72.jpeg",
+      "category": "Furniture",
+      "desc": "Elevate your office space with this sleek and comfortable Modern Ergonomic Office Chair. Designed to provide optimal support throughout the workday, it features an adjustable height mechanism, smooth-rolling casters for easy mobility, and a cushioned seat for extended comfort. The clean lines and minimalist white design make it a versatile addition to any contemporary workspace."
+    },
+    {
+      "id": "f795",
+      "title": "Modern Ergonomic Office Chair",
+      "price": "70",
+      "img": "https://i.imgur.com/3dU0m72.jpeg",
+      "category": "Furniture",
+      "desc": "Elevate your office space with this sleek and comfortable Modern Ergonomic Office Chair. Designed to provide optimal support throughout the workday, it features an adjustable height mechanism, smooth-rolling casters for easy mobility, and a cushioned seat for extended comfort. The clean lines and minimalist white design make it a versatile addition to any contemporary workspace."
     }
   ]
 }
