@@ -4,14 +4,13 @@
 }
 
 .product {
-  width: 89%;
   position: absolute;
-  left: 600px;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   gap: 30px;
-  padding-top: 50px;
+  top: 530px;
+  left: 60px;
   .card {
     width: 326px;
     margin: 0 auto;

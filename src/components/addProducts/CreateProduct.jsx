@@ -1,12 +1,17 @@
 import React, { useState } from "react";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 const CreateProduct = () => {
   const [title, setTitle] = useState("");
   const [price, setPrice] = useState("");
   const [img, setImg] = useState("");
   const [category, setCategory] = useState("");
   const [desc, setDesc] = useState("");
+
   const handleSubmit = (e) => {
     e.preventDefault();
+
     const newProduct = {
       title,
       price,
@@ -14,27 +19,40 @@ const CreateProduct = () => {
       category,
       desc,
     };
-    fetch("http://localhost:5000/products", {
+
+    fetch("/products", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
       body: JSON.stringify(newProduct),
     })
-      .then((response) => response.json())
+      .then((response) => {
+        if (!response.ok) {
+          return response.json().then((err) => {
+            throw new Error(err.message || "Failed to add product");
+          });
+        }
+        return response.json();
+      })
       .then((data) => {
         console.log("Product added:", data);
+        toast.success("Product Yaratildi");
         setTitle("");
         setPrice("");
         setImg("");
         setCategory("");
         setDesc("");
       })
-      .catch((error) => console.error("Error adding product:", error));
+      .catch((error) => {
+        console.error("Error adding product:", error);
+        toast.error(`Error adding product: ${error.message}`);
+      });
   };
 
   return (
     <div className="create">
+      <ToastContainer />
       <form onSubmit={handleSubmit}>
         <div className="inp">
           <label htmlFor="title">Title</label>
@@ -59,12 +77,12 @@ const CreateProduct = () => {
           />
         </div>
         <div className="inp">
-          <label htmlFor="Image-url">Image-url</label>
+          <label htmlFor="Image-url">Image URL</label>
           <input
             value={img}
             onChange={(e) => setImg(e.target.value)}
             type="text"
-            placeholder="Image-url"
+            placeholder="Image URL"
             name="Image-url"
             required
           />

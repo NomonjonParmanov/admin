@@ -10,7 +10,7 @@ const Admin = () => {
   const handleDelete = () => {
     localStorage.removeItem("token");
     window.location.reload();
-    navigate("/login");
+    navigate("/");
   };
   return (
     <>

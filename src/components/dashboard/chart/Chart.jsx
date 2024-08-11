@@ -32,15 +32,15 @@ function Chart() {
       .get("https://fakestoreapi.com/products")
       .then((response) => {
         const labels = response.data
-          .slice(0, 10)
+          .slice(0, 20)
           .map((product) => product.title.substring(0, 10));
-        const data = response.data.slice(0, 10).map((product) => product.price);
+        const data = response.data.slice(0, 20).map((product) => product.price);
 
         setChartData({
           labels: labels,
           datasets: [
             {
-              label: "Mahsulot narxlari",
+              label: "Mahsulot narxlari $",
               data: data,
               borderColor: "rgba(75,192,192,1)",
               backgroundColor: "rgba(75,192,192,0.2)",
@@ -53,7 +53,7 @@ function Chart() {
   }, []);
 
   return (
-    <div style={{ width: "600px", marginLeft: "600px" }}>
+    <div style={{ width: "1000px", marginLeft: "600px" }}>
       {Object.keys(chartData).length > 0 && <Line data={chartData} />}
     </div>
   );

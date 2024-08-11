@@ -4,10 +4,12 @@ import Products from "./products/Products";
 
 const Dashboard = () => {
   return (
-    <div className="chart">
-      <Chart />
+    <>
+      <div className="chart">
+        <Chart />
+      </div>
       <Products />
-    </div>
+    </>
   );
 };
 
